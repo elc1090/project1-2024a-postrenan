@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+    width: 300px;
+    height: 200px;
+}
+
+@media only screen and (max-width: 800px){
+    .form-basic-infos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    label{
+        word-wrap: break-word;
+    }
+
+    input{
+        border-radius: 5px;
+        min-width: 300px;
+    }
+
+    .header-container{
+        margin: 25px;
+    }
+
+    .inside-form-container{
+        background: #F9FAFB;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .main-container{
+        display: flex;
+        margin: 15px;
+        flex-direction: column;
+        border-radius: 15px;
+
+    }
+
+    .time-label-container{
+        background: #F9FAFB ;
+    ;
+    }
+
+    .signature-container{
+        display: flex;
+        border-radius: 15px;
+        margin: 15px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .btn-forms{
+        background: #AD00FF;
+        border-radius: 5px;
+        width:150px;
+        padding: 5px;
+    }
+
+
+    .flex-row {
+        display: flex;
+
+    }
+    .wrapper {
+        border: 1px solid black;
+        border-right: 0;
+    }
+
+    .signature{
+        max-width: 100px;
+    }
+
+    canvas {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        cursor: crosshair;
+    }
+    button#clear , #clearOr , #clearAv1 , #clearAv2 {
+        height: 100%;
+        background:  #AD00FF;
+        border: 1px solid transparent;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    button#clear, #clearOr, #clearAv1, #clearAv2 span {
+        transform: rotate(0deg);
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    .form-basic-infos{
+        display: flex;
+        flex-direction: column;
+        margin: 100px;
+    }
+
+    label{
+        word-wrap: break-word;
+    }
+
+    input{
+        border-radius: 5px;
+        min-width: 300px;
+    }
+
+    .header-container{
+        margin: 25px;
+    }
+
+
+    .inside-form-container{
+        background: #F9FAFB;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .main-container{
+        display: flex;
+        margin: 15px;
+        border: solid;
+        flex-direction: row;
+        border-radius: 15px;
+
+    }
+
+    .information-container{
+        display: flex;
+        border-radius: 15px;
+        margin: 15px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .time-label-container{
+        background: #F9FAFB ;
+    ;
+    }
+
+    .signature-container{
+        display: flex;
+        margin-top: 100px;
+        border-radius: 15px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .btn-forms{
+        background: #AD00FF;
+        border-radius: 5px;
+        width:150px;
+        padding: 5px;
+    }
+
+    .flex-row {
+        display: flex;
+
+    }
+    .wrapper {
+        border: 1px solid black;
+        border-right: 0;
+    }
+    canvas {
+        background: #fff;
+        width: 400px;
+        height: 150px;
+        cursor: pointer;
+    }
+    button#clear , #clearOr , #clearAv1 , #clearAv2 {
+        height: 100%;
+        background:  #AD00FF;
+        border: 1px solid transparent;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    button#clear, #clearOr, #clearAv1, #clearAv2 span {
+        transform: rotate(0deg);
+        display: block;
+    }
+}

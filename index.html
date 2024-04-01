@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação TCC</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossOrigin="anonymous"></script>
+</head>
+<body>
+<header class="header-container">
+    <h1 class="header-title">Sistema de avaliação de TCC</h1>
+    <p>Complete o formulário abaixo para avaliar o TCC</p>
+</header>
+<main class="main-container">
+    <section class="information-container flex flex-col">
+        <form class="form-basic-infos">
+            <label>Nome do Aluno*</label>
+            <input required type="text" id="stName">
+            <label>Nome do Orientador*</label>
+            <input required type="text" id="orName">
+
+            <div class="inside-form-container flex flex-col">
+                <h3>Banca de avaliadores</h3>
+                <label for="av1Name">Nome Avaliador(a) 1*</label>
+                <input required type="text" id="av1Name">
+                <label for="av2Name">Nome Avaliador(a) 2*</label>
+                <input required type="text" id="av2Name">
+            </div>
+            <div class="inside-form-container flex flex-col">
+                <label for="room">Sala*</label>
+                <input  type="text" id="room">
+                <label for="course">Curso*</label>
+                <input type="text" required id="course">
+                <label for="note">Nota final*</label>
+                <input required type="number" min="0" max="10" id="note">
+            </div>
+            <div class="inside-form-container flex flex-col">
+                <h3>Data Avaliação</h3>
+                <label class="date-label">Data*</label>
+                <input type="date" required id="date">
+                <label class="time-label-container">Hora*</label>
+                <input  type="time" id="time">
+            </div>
+            <div class="inside-form-container flex flex-col">
+                <label>Data Final para entregar*</label>
+                <input type="date" id="finalDate">
+                <label>Correções a serem feitas</label>
+                <textarea  id="observations"></textarea>
+            </div>
+        </form>
+    </section>
+
+    <section class="signature-container">
+        <p>Assinatura Estudante</p>
+        <div class="flex-row">
+            <div class="wrapper">
+                <canvas id="signature-pad" ></canvas>
+            </div>
+            <div class="clear-btn">
+                <button id="clear"><span> Limpar </span></button>
+            </div>
+        </div>
+        <button ><span> Exportar Assinatura </span></button>
+        <p>Assinatura Orientador</p>
+        <div class="flex-row">
+            <div class="wrapper">
+                <canvas id="signature-padOr"></canvas>
+            </div>
+            <div class="clear-btn">
+                <button id="clearOr"><span> Limpar </span></button>
+            </div>
+        </div>
+        <button ><span> Exportar Assinatura </span></button>
+
+        <p>Assinatura Avaliador 1</p>
+        <div class="flex-row">
+            <div class="wrapper">
+                <canvas id="signature-padAv1"  ></canvas>
+            </div>
+            <div class="clear-btn">
+                <button id="clearAv1"><span> Limpar </span></button>
+            </div>
+        </div>
+        <button ><span> Exportar Assinatura </span></button>
+
+        <p>Assinatura Avaliador 2</p>
+        <div class="flex-row">
+            <div class="wrapper">
+                <canvas id="signature-padAv2" ></canvas>
+            </div>
+            <div class="clear-btn">
+                <button id="clearAv2"><span> Limpar </span></button>
+            </div>
+        </div>
+        <button id="export"><span> Exportar Assinatura </span></button>
+        <br>
+
+        <button class="btn-forms" type="submit" onclick="generatePDF()" >Salvar</button>
+    </section>
+</main>
+<footer>
+
+</footer>
+</body>
+<script src="gerarLink.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="geradorPdf.js"></script>
+<script src="assinatura.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
