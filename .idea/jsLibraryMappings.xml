@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{pdf-lib}" />
+    <file url="PROJECT" libraries="{bootstrap, jquery-3.6.0, jquery-maskmoney, jspdf, signature_pad}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

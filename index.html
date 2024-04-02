@@ -19,10 +19,10 @@
 <main class="main-container">
     <section class="information-container flex flex-col">
         <form class="form-basic-infos">
-            <label>Nome do Aluno*</label>
-            <input required type="text" id="stName">
-            <label>Nome do Orientador*</label>
-            <input required type="text" id="orName">
+            <label for="stName">Nome do Aluno*</label>
+            <input type="text" id="stName" required>
+            <label for="orName">Nome do Orientador*</label>
+            <input type="text" id="orName" required>
 
             <div class="inside-form-container flex flex-col">
                 <h3>Banca de avaliadores</h3>
@@ -48,9 +48,11 @@
             </div>
             <div class="inside-form-container flex flex-col">
                 <label>Data Final para entregar*</label>
-                <input type="date" id="finalDate">
+                <label for="finalDate"></label>
+                <input type="date" id="finalDate" required>
                 <label>Correções a serem feitas</label>
-                <textarea  id="observations"></textarea>
+                <label for="observations"></label>
+                <textarea id="observations"></textarea>
             </div>
             <p>Assinatura Estudante</p>
             <div class="flex-row">
@@ -229,7 +231,7 @@
     </section>
 </main>
 <footer >
-    <button class="btn-forms" type="submit" onclick="generatePDF()" >Salvar</button>
+    <button class="btn-forms" type="submit" onclick="generatePDF()" >Gerar PDF</button>
 </footer>
 </body>
 <script src="gerarLink.js"></script>
