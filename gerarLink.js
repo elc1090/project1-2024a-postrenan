@@ -1,4 +1,4 @@
-/*
+
 document.addEventListener("DOMContentLoaded", function() {
     // Function to get URL parameter by name
     function getParameterByName(name) {
@@ -46,7 +46,6 @@ btn.addEventListener("click", function(e){
 
 
     const url = `index.html?tituloTrabalho=${tituloTrabalho}&nomeAluno=${nomeAluno}&nomeProfessor=${nomeProfessor}&nomeAvaliador1=${nomeAvaliador1}&nomeAvaliador2=${nomeAvaliador2}&curso=${curso}&data=${dataValue}&hora=${horaValue}&sala=${sala}`;
-  
+
     window.open(url, '_blank');
 });
-*/
