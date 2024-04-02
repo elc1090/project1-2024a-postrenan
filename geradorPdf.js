@@ -110,7 +110,54 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   doc.text(splitTexto, 20, 90);
   doc.text(local, 115, 190);
 
-  // Save the PDF
+  doc.addPage();
+
+
+  const conteudoApresentacao = document.getElementById("presentationContentAv1").value;
+  const dominio = document.getElementById("domainPresentationAv1").value;
+  const poderSintese = document.getElementById("timeAndSintersAv1").value;
+  const subT3 = document.getElementById("subPresentationAv1").value;
+
+  const estrutura = document.getElementById("structAv2").value;
+  const relOriQual = document.getElementById("qualityAv1").value;
+  const conhecimento = document.getElementById("knowledgeAv1").value;
+  const adequacao = document.getElementById("adequationAv1").value;
+  const subT7 = document.getElementById("subWriteAv1").value;
+  const total = document.getElementById("totalWriteAv1").value;
+
+  let dataFinal = document.getElementById("finalDate").value;
+
+  const radios = document.getElementsByName("alterar");
+  const selected = Array.from(radios).find(radio => radio.checked);
+
+  y=106
+
+  const conteudoPDF = `
+    Aluno: ${nomeAluno} 
+    Professor: ${nomeProfessor}
+    Data: ${data}
+    Hora: ${hora}
+        `;
+
+  // Adicione o conteúdo ao PDF
+  doc.text(conteudoPDF, 27, 60, 0);
+
+  doc.text(conteudoApresentacao, 166, y, 0, );
+  doc.text(dominio, 166, y+=7, 0, );
+  doc.text(poderSintese, 166, y+=7, 0, );
+  doc.text(subT3, 166, y+=7, 0, );
+
+  doc.text(estrutura, 166, y+=16, 0, );
+  doc.text(relOriQual, 166, y+=7, 0, );
+  doc.text(conhecimento, 166, y+=7, 0, );
+  doc.text(adequacao, 166, y+=7, 0, );
+  doc.text(subT7, 166, y+=8, 0, );
+  doc.text(total, 166, y+=8, 0, );
+
+  doc.text(`O aluno deverá realizar alterações no relatório escrito? ${selected.value}.`, 32, 190, 0);
+
+  doc.text(dataFim, 146, 237.5, 0);
+
   doc.save("filled_form.pdf");
 });
 
