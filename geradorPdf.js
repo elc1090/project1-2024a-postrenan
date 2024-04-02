@@ -1,3 +1,17 @@
+
+
+function importImage(event) {
+  var file = event.target.files[0];
+  var reader = new FileReader();
+  reader.onloadend = function() {
+    var img = document.createElement('img');
+    img.src = reader.result;
+    document.body.appendChild(img);
+  }
+  reader.readAsDataURL(file);
+}
+
+
 document.getElementById("generatePdfBtn").addEventListener("click", function () {
   alert("PDF está sendo gerado, aguarde um momento");
   const doc = new jspdf.jsPDF();
@@ -23,7 +37,6 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   const titulo = document.getElementById("title").value;
 
 
-  //Assinatura img
   const assinaturaProf = document.getElementById("assinaturaOr");
   const imgProf = assinaturaProf.toDataURL("image/png");
 
