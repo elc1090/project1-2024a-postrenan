@@ -1,9 +1,14 @@
 # Projeto: Remake de site/app web
 
-![Substitua a imagem ao lado por um screenshot do seu projeto](https://mdswanson.com/static/chops-ux-step-4.png "Screenshot do projeto")
+![image](https://github.com/elc1090/project1-2024a-postrenan/assets/76953726/32b81f35-4043-4396-a9d9-204b138647fd)
+![image](https://github.com/elc1090/project1-2024a-postrenan/assets/76953726/91e93f81-9662-4ec4-a6a3-d9a8c5b035a3)
+![Uploading image.png…]()
 
 
-Acesso: [Substitua este texto pela URL para acesso ao site publicado](https://atatcc.netlify.app/)
+
+
+
+Acesso: (https://atatcc.netlify.app/)
 
 
 #### Desenvolvedor(a)
