@@ -130,7 +130,7 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   const radios = document.getElementsByName("alterar");
   const selected = Array.from(radios).find(radio => radio.checked);
 
-  y=106
+  y=200
 
   const conteudoPDF = `
     Aluno: ${nomeAluno} 
@@ -142,6 +142,7 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   doc.text(conteudoPDF, 27, 60, 0);
   const x1 = 20;
   const x2 = 166;
+  y += 45;
   doc.text("Apresentação", 100, y, 0);
   y += 10;
   doc.text("Conteúdo da Apresentação:", x1, y, 0);
@@ -177,8 +178,8 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   y += 7;
   doc.text("TOTAL (max 10):", x1, y, 0);
   doc.text(total, x2, y, 0);
-
-  doc.text(dataFim, 146, 237.5, 0);
+  y += 35;
+  doc.text(dataFim, x1, y, 0);
 
   doc.save("filled_form.pdf");
 });
