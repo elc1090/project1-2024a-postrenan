@@ -37,6 +37,21 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   const titulo = document.getElementById("title").value;
 
 
+  const conteudoApresentacao = document.getElementById("conteudoApresentacao").value;
+  const dominio = document.getElementById("dominio").value;
+  const poderSintese = document.getElementById("poderSintese").value;
+  const subT3 = document.getElementById("subT3").value;
+
+  const estrutura = document.getElementById("estrutura").value;
+  const relOriQual = document.getElementById("relOriQual").value;
+  const conhecimento = document.getElementById("conhecimento").value;
+  const adequacao = document.getElementById("adequacao").value;
+  const subT7 = document.getElementById("subT7").value;
+  const total = document.getElementById("total").value;
+
+  const radios = document.getElementsByName("alterar");
+  const selected = Array.from(radios).find(radio => radio.checked);
+
   const assinaturaProf = document.getElementById("assinaturaOr");
   const imgProf = assinaturaProf.toDataURL("image/png");
 
