@@ -143,6 +143,8 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   doc.text(conteudoPDF, 27, 60, 0);
   var x1 = 20;
   var x2 = 166;
+  doc.text("Apresentação", 100, y -150 , 0);
+  y += 10;
 
   doc.text("Conteúdo da Apresentação:", x1, y -150 , 0);
   doc.text(conteudoApresentacao, x2, y, 0);
@@ -157,6 +159,9 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   doc.text(subT3, x2, y, 0);
 
   y += 16;
+  doc.text("Conteúdo do relatório escrito", 100, y -150 , 0);
+  y += 10;
+
   doc.text("Estrutura do trabalho:", x1, y, 0);
   doc.text(estrutura, x2, y, 0);
   y += 7;
