@@ -35,15 +35,15 @@
                 <label for="room">Sala*</label>
                 <input  type="text" id="room">
                 <label for="course">Curso*</label>
-                <input type="text" required id="course">
+                <input type="text" id="course">
                 <label for="note">Nota final*</label>
                 <input required type="number" min="0" max="10" id="note">
             </div>
             <div class="inside-form-container flex flex-col">
                 <h3>Data Avaliação</h3>
-                <label class="date-label">Data*</label>
+                <label for="date" class="date-label">Data*</label>
                 <input type="date" required id="date">
-                <label class="time-label-container">Hora*</label>
+                <label for="time" class="time-label-container">Hora*</label>
                 <input  type="time" id="time">
             </div>
             <div class="inside-form-container flex flex-col">
@@ -52,130 +52,75 @@
                 <label>Correções a serem feitas</label>
                 <textarea  id="observations"></textarea>
             </div>
-            <h2 class="">Apresentação</h2>
-            <table class="">
-                <tbody>
-                <tr>
-                    <td>Conteúdo da Apresentação</td>
-                    <td>Máx 1.0</td>
-
-                    <td>
-                        <input type="text"  placeholder="" id="conteudoApresentacao" onblur="verificarValor(this, 1.0)" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Domínio dos Recursos Didáticos</td>
-                    <td>Máx 1.0</td>
-                    <td>
-                        <input type="text" placeholder="" id="dominio" onblur="verificarValor(this, 1.0)" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Utilização do Tempo e Poder de Síntese</td>
-                    <td>Máx 1.0</td>
-                    <td>
-                        <input type="text"  placeholder="" id="poderSintese" onblur="verificarValor(this, 1.0)">
-                    </td>
-                </tr>
-                <tr>
-                    <td >SUB-TOTAL </td>
-                    <td>Máx 3.0</td>
-                    <td><input type="text"  placeholder="" id="subT3" readonly disabled></td>
-                </tr>
-                </tbody>
-            </table>
-            <h2 class="">Conteúdo do relatório escrito</h2>
-            <table >
-                <tbody>
-                <tr>
-                    <td>Estrutura do Trabalho</td>
-                    <td>Máx 1.0</td>
-                    <td>
-                        <input type="text"  placeholder="" id="estrutura" onblur="verificarValor(this, 1.0)">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Relevância, Originalidade e Qualidade do Conteúdo do Texto</td>
-                    <td>Máx 3.0</td>
-                    <td>
-                        <input type="text"  placeholder="" id="relOriQual" onblur="verificarValor(this, 3.0)">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Grau de Conhecimento Demonstrado no Trabalho Escrito</td>
-                    <td>Máx 2.0</td>
-                    <td>
-                        <input type="text"  placeholder="" id="conhecimento" onblur="verificarValor(this, 2.0)">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adequação da Bibliografia Apresentada</td>
-                    <td>Máx 1.0</td>
-                    <td>
-                        <input type="text"  placeholder="" id="adequacao" onblur="verificarValor(this, 1.0)">
-                    </td>
-                </tr>
-                <tr>
-                    <td>SUB-TOTAL</td>
-                    <td>Máx 7.0</td>
-                    <td><input type="text"  placeholder="0.0" id="subT7" readonly disabled></td>
-                </tr>
-                <tr>
-                    <td >TOTAL</td>
-                    <td>Máx 10</td>
-                    <td><input type="text" placeholder="0.0" id="total" readonly disabled></td>
-                </tr>
-                </tbody>
-            </table>
-
-            <label for="flexRadioDefault1">O aluno deverá realizar alterações no Relatório Escrito?</label><br>
-            <input  type="radio" name="alterar" id="sim"  value="Sim">
-            <label for="flexRadioDefault1">Sim</label><br>
-            <input type="radio" name="alterar" id="nao" value="Não">
-            <label  for="flexRadioDefault2">Não</label>
-
-            <h2 >Avaliação</h2>
-            <table >
-                <tbody>
-                <tr>
-                    <td>Relevância e originalidade</th>
-                    <td>Máx 2.0</th>
-                    <td>
-                        <input type="text" placeholder="" inputmode="numeric" id="relevancia"
-                               onblur="verificarValor(this, 2.0)" required>
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <td>Qualidade do conteúdo</td>
-                    <td>Máx 3.0</td>
-                    <td>
-                        <input type="text"  placeholder="" inputmode="numeric" id="conteudo"
-                               onblur="verificarValor(this, 3.0)" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Apresentação</td>
-                    <td>Máx 5.0</td>
-                    <td>
-                        <input type="text" placeholder="" inputmode="numeric" id="apresentacao"
-                               onblur="verificarValor(this, 5.0)" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nota andamento </td>
-                    <td>Máx 10.0</td>
-                    <td><input type="text" placeholder="0.0" id="total" readonly disabled>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
         </form>
     </section>
 
+    <section class="information-container flex flex-col">
+        <form class="form-basic-infos">
+            <div class="inside-form-container flex flex-col">
+                <h3>Apresentação</h3>
+                <label for="av1Name">Conteúdo da Apresentação</label>
+                <label>Máx 1.0</label>
+                <input type="text" id="presentationContent" onblur="verificarValor(this, 1.0)" required>
+                <label for="av2Name">Domínio dos Recursos Didáticos</label>
+                <label>Máx 1.0</label>
+                <input type="text" id="dominio" onblur="verificarValor(this, 1.0)" required>
+                <label for="av2Name">Domínio dos Recursos Didáticos</label>
+                <label>Máx 1.0</label>
+                <input type="text" id="tempo" onblur="verificarValor(this, 1.0)" required>
+                <label for="av2Name">Utilização do Tempo e Poder de Síntese</label>
+                <label>Máx 1.0</label>
+                <input type="text" id="poderSintese" onblur="verificarValor(this, 1.0)" required>
+                <h4>SUB-TOTAL </h4>
+                <p>Máx 3.0</p>
+                <label>Máx 1.0</label>
+                <input type="text"  placeholder="" id="subT3" readonly disabled>
+            </div>
 
-    <section class="signature-container">
+            <div class="inside-form-container flex flex-col">
+                <h3>Conteúdo do relatório escrito</h3>
+                <label for="av1Name">Estrutura do Trabalho</label>
+                <label>Máx 1.0</label>
+                <input type="text"  placeholder="" id="estrutura" onblur="verificarValor(this, 1.0)" required>
+                <label for="av2Name">Relevância, Originalidade e Qualidade do Conteúdo do Texto</label>
+                <label>Máx 3.0</label>
+                <input placeholder="" id="relOriQual" onblur="verificarValor(this, 3.0)">
+                <label for="av2Name">Grau de Conhecimento Demonstrado no Trabalho Escrito</label>
+                <label>Máx 2.0</label>
+                <input type="text"  placeholder="" id="conhecimento" onblur="verificarValor(this, 2.0)" required>
+                <label for="av2Name">Adequação da Bibliografia Apresentada</label>
+                <label>Máx 1.0</label>
+                <input type="text"placeholder="" id="adequacao" onblur="verificarValor(this, 1.0)" required>
+                <h4>TOTAL </h4>
+                <p>Máx 3.0</p>
+                <label>Máx 1.0</label>
+                <input type="text" placeholder="0.0" id="total" readonly disabled>
+                <label for="flexRadioDefault1">O aluno deverá realizar alterações no Relatório Escrito?</label><br>
+                <input  type="radio" name="alterar" id="sim"  value="Sim">
+                <label for="flexRadioDefault1">Sim</label><br>
+                <input type="radio" name="alterar" id="nao" value="Não">
+                <label  for="flexRadioDefault2">Não</label>
+            </div>
+
+            <div class="inside-form-container flex flex-col">
+                <h3>Avaliação</h3>
+                <label for="av1Name">Relevância e originalidade</label>
+                <label>Máx 2.0</label>
+                <input type="text" placeholder="" inputmode="numeric" id="relevancia" onblur="verificarValor(this, 2.0)" required>
+                <label for="av2Name">Qualidade do conteúdo</label>
+                <label>Máx 3.0</label>
+                <input type="text" placeholder="" inputmode="numeric" id="conteudo" onblur="verificarValor(this, 3.0)" required>
+                <label for="av2Name">Apresentação</label>
+                <label>Máx 5.0</label>
+                <input type="text"placeholder="" inputmode="numeric" id="apresentacao" onblur="verificarValor(this, 5.0)" required>
+                <label for="av2Name">Nota andamento</label>
+                <label>Máx 10.0</label>
+                <input type="text" placeholder="0.0" id="total" readonly disabled>
+            </div>
+        </form>
+    </section>
+
+    <section class="information-container flex flex-col">
         <p>Assinatura Estudante</p>
         <div class="flex-row">
             <div class="wrapper">
@@ -222,8 +167,9 @@
 
         <button class="btn-forms" type="submit" onclick="generatePDF()" >Salvar</button>
     </section>
+
 </main>
-<footer>
+<footer >
 
 </footer>
 </body>

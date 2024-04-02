@@ -53,9 +53,9 @@ textarea {
     .main-container{
         display: flex;
         margin: 15px;
+        flex-wrap: wrap;
         flex-direction: column;
         border-radius: 15px;
-
     }
 
     .time-label-container{
@@ -119,7 +119,6 @@ textarea {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin: 100px;
     }
 
     label{
@@ -158,6 +157,8 @@ textarea {
         margin: 15px;
         flex-direction: column;
         padding: 10px;
+        max-height: fit-content;
+        max-width: 300px;
     }
 
     .time-label-container{
