@@ -1,47 +1,8 @@
 
-
-
 const canvasSt = document.getElementById("signature-pad");
 const canvasOr = document.getElementById("signature-padOr");
 const canvasAv1 = document.getElementById("signature-padAv1");
 const canvasAv2 = document.getElementById("signature-padAv2");
-const name = document.getElementById("stName");
-const professor = document.getElementById("orName");
-const avaliator1 = document.getElementById("av1Name")
-const avaliator2 = document.getElementById("av2Name");
-const course = document.getElementById("course");
-const note = document.getElementById("note");
-const date = document.getElementById("date");
-const time = document.getElementById("time");
-const finalDate = document.getElementById("finalDate");
-const observations = document.getElementById("observations");
-
-
-function generatePDF() {
-    const doc = new jsPDF();
-    const elementHandler = {
-        '#ignorePDF': function (element, renderer) {
-            return true;
-        }
-    };
-    const source = window.document.getElementsByTagName("body")[50];
-    doc.fromHTML = function (source) {
-
-    };
-    doc.fromHTML(source, 15, 15,
-        {
-            'width': 180, 'elementHandlers': elementHandler
-        });
-
-    doc.output("dataurlnewwindow");
-
-}
-
-function submit(name, professor, avaliator1, avaliator2, course, note, date, time, finalDate, observations) {
-
-    alert("deu certo porra");
-}
-
 
 function resizeCanvas() {
     const ratio = Math.max(window.devicePixelRatio || 1, 1);

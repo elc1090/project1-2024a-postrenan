@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function() {
     // Function to get URL parameter by name
     function getParameterByName(name) {
@@ -48,3 +49,4 @@ btn.addEventListener("click", function(e){
   
     window.open(url, '_blank');
 });
+*/

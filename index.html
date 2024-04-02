@@ -23,6 +23,8 @@
             <input type="text" id="stName" required>
             <label for="orName">Nome do Orientador*</label>
             <input type="text" id="orName" required>
+            <label for="title">Titulo TCC</label>
+            <input type="text" id="title" required>
 
             <div class="inside-form-container flex flex-col">
                 <h3>Banca de avaliadores</h3>
@@ -57,20 +59,20 @@
             <p>Assinatura Estudante</p>
             <div class="flex-row">
                 <div class="wrapper">
-                    <canvas id="signature-pad" ></canvas>
+                    <canvas id="assinaturaAl"></canvas>
                 </div>
                 <div class="clear-btn">
-                    <button id="clear"><span> Limpar </span></button>
+                    <button id="clear" onclick="limparAssinatura('assinaturaAl')"><span> Limpar </span></button>
                 </div>
             </div>
             <button ><span> Exportar Assinatura </span></button>
             <p>Assinatura Orientador</p>
             <div class="flex-row">
                 <div class="wrapper">
-                    <canvas id="signature-padOr"></canvas>
+                    <canvas id="assinaturaOr"></canvas>
                 </div>
                 <div class="clear-btn">
-                    <button id="clearOr"><span> Limpar </span></button>
+                    <button id="clearOr" onclick="limparAssinatura('assinaturaOr')"><span> Limpar </span></button>
                 </div>
             </div>
             <button ><span> Exportar Assinatura </span></button>
@@ -143,10 +145,10 @@
             <p>Assinatura Avaliador 1</p>
             <div class="flex-row">
                 <div class="wrapper">
-                    <canvas id="signature-padAv1"  ></canvas>
+                    <canvas id="assinaturaAval1"  ></canvas>
                 </div>
                 <div class="clear-btn">
-                    <button id="clearAv1"><span> Limpar </span></button>
+                    <button id="clearAv1" onclick="limparAssinatura('assinaturaAval1')"><span> Limpar </span></button>
                 </div>
             </div>
             <button ><span> Exportar Assinatura </span></button>
@@ -219,10 +221,10 @@
             <p>Assinatura Avaliador 2</p>
             <div class="flex-row">
                 <div class="wrapper">
-                    <canvas id="signature-padAv2" ></canvas>
+                    <canvas id="assinaturaAval2" ></canvas>
                 </div>
                 <div class="clear-btn">
-                    <button id="clearAv2"><span> Limpar </span></button>
+                    <button id="clearAv2" onclick="limparAssinatura('assinaturaAval2')"><span> Limpar </span></button>
                 </div>
             </div>
             <button id="export"><span> Exportar Assinatura </span></button>
@@ -231,13 +233,12 @@
     </section>
 </main>
 <footer >
-    <button class="btn-forms" type="submit" onclick="generatePDF()" >Gerar PDF</button>
+    <button class="btn-forms" type="button" id="generatePdfBtn" >Gerar PDF</button>
 </footer>
 </body>
-<script src="gerarLink.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="gerarLink.js"></script>
 <script src="geradorPdf.js"></script>
 <script src="assinatura.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="script.js"></script>
 </html>

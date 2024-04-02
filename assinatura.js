@@ -1,4 +1,4 @@
-// Função para inicializar um campo canvas
+
 function iniciarCanvas(canvasId) {
     var canvas = document.getElementById(canvasId);
     var ctx = canvas.getContext("2d");

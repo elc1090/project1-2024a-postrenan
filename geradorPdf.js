@@ -1,41 +1,27 @@
 document.getElementById("generatePdfBtn").addEventListener("click", function () {
-  // Create a instancia jspdf
+  alert("PDF está sendo gerado, aguarde um momento");
   const doc = new jspdf.jsPDF();
   doc.setFontSize(12);
   doc.setFont('arial');
   doc.setLineHeightFactor(1.5);
-  
-  //pdf padrão da ufsm
+
   var img = 'aaa.png'
   var width = doc.internal.pageSize.getWidth();
   var height = doc.internal.pageSize.getHeight();
   doc.addImage(img, "PNG", 0, 0, width, height);
 
-
-  //chamar valores
   const nomeAluno = document.getElementById("stName").value;
   const nomeProfessor = document.getElementById("orName").value;
-  const dataValue = document.getElementById("data").value;
+  const dataValue = document.getElementById("date").value;
   const hora = document.getElementById("time").value;
   const nomeAvaliador1 = document.getElementById("av1Name").value;
   const nomeAvaliador2 = document.getElementById("av2Name").value;
   const curso = document.getElementById("course").value;
   const notaFinal = document.getElementById("note").value;
   const dataFim = document.getElementById("finalDate").value;
-  const sala = document.getElementById("sala").value;
-  const titulo = document.getElementById("tituloTrabalho").value;
+  const sala = document.getElementById("room").value;
+  const titulo = document.getElementById("title").value;
 
-
-  const name = document.getElementById("stName");
-  const professor = document.getElementById("orName");
-  const avaliator1 = document.getElementById("av1Name")
-  const avaliator2 = document.getElementById("av2Name");
-  const course = document.getElementById("course");
-  const note = document.getElementById("note");
-  const date = document.getElementById("date");
-  const time = document.getElementById("time");
-  const finalDate = document.getElementById("finalDate");
-  const observations = document.getElementById("observations");
 
   //Assinatura img
   const assinaturaProf = document.getElementById("assinaturaOr");
@@ -49,12 +35,7 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
 
   const assinaturaAl = document.getElementById("assinaturaAl");
   const imgAl = assinaturaAl.toDataURL("image/png");
-  //
 
-  if (nomeAluno === "" || nomeProfessor === "" || dataValue === "" ||nomeAvaliador1 === "" ||nomeAvaliador2 === "" ||curso === "" ||notaFinal === "" ||dataFim === "" ||sala === "" ||titulo === "" || assinaturaAl == null) {
-    alert("Por favor, preencha todos os campos.");
-    return false;
-  }
   
   doc.addImage(imgProf, "PNG", 30, 205, 50, 20);
   doc.addImage(imgAval1, "PNG", 30, 230, 50, 20);
@@ -84,8 +65,6 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   const local = `
     Santa Maria, RS ${dia} de ${mesExt} de ${ano} 
   `;
-
-
 
   // Função para dividir o texto em várias linhas
   function splitText(text, maxWidth) {
