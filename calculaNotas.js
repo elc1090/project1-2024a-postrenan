@@ -1,48 +1,59 @@
-function verificarValor(input) {
-    // Obtenha o valor do campo de entrada
-    var valor = parseFloat(input.value);
-
-    // Verifique se o valor é maior que 1
+function verificarValorAv1(input) {
+    const valor = parseFloat(input.value);
     if (valor > 1) {
-        // Zere o campo de entrada
         input.value = '';
-
-        // Mostre um alerta na tela
         alert('O valor inserido é maior que 1. O campo foi zerado.');
     }
-    calcularSubTotal3()
-    calcularSubTotal7()
+    calcularApresentacaoAv1()
+    calcularRelatorioAv1()
 }
-function verificarValor2(input) {
-    // Obtenha o valor do campo de entrada
-    var valor = parseFloat(input.value);
-
-    // Verifique se o valor é maior que 1
+function verificarValor2Av1(input) {
+    const valor = parseFloat(input.value);
     if (valor > 2) {
-        // Zere o campo de entrada
         input.value = '';
-
-        // Mostre um alerta na tela
         alert('O valor inserido é maior que 2. O campo foi zerado.');
     }
-    calcularSubTotal3()
-    calcularSubTotal7()
+    calcularApresentacaoAv1()
+    calcularRelatorioAv1()
 }
-function verificarValor3(input) {
-    // Obtenha o valor do campo de entrada
-    var valor = parseFloat(input.value);
-
-    // Verifique se o valor é maior que 1
+function verificarValor3Av1(input) {
+    const valor = parseFloat(input.value);
     if (valor > 3) {
-        // Zere o campo de entrada
         input.value = '';
-
-        // Mostre um alerta na tela
         alert('O valor inserido é maior que 3. O campo foi zerado.');
     }
-    calcularSubTotal3()
-    calcularSubTotal7()
+    calcularApresentacaoAv1()
+    calcularRelatorioAv1()
 }
+
+function verificarValorAv2(input) {
+    const valor = parseFloat(input.value);
+    if (valor > 1) {
+        input.value = '';
+        alert('O valor inserido é maior que 1. O campo foi zerado.');
+    }
+    calcularApresentacaoAv2()
+    calcularRelatorioAv2()
+}
+function verificarValor2Av2(input) {
+    const valor = parseFloat(input.value);
+    if (valor > 2) {
+        input.value = '';
+        alert('O valor inserido é maior que 2. O campo foi zerado.');
+    }
+    calcularApresentacaoAv2()
+    calcularRelatorioAv2()
+}
+function verificarValor3Av2(input) {
+    const valor = parseFloat(input.value);
+    if (valor > 3) {
+        input.value = '';
+        alert('O valor inserido é maior que 3. O campo foi zerado.');
+    }
+    calcularApresentacaoAv2()
+    calcularRelatorioAv2()
+}
+
 
 $(document).ready(function() {
     formatarNotas();
@@ -52,66 +63,124 @@ $(document).ready(function() {
     $(".nota-input").maskMoney({
       thousands: '',
       decimal: '.',
-      precision: 2, // Duas casas decimais
-      allowZero: true, // Permitir 0.00
-      allowNegative: false // Não permitir números negativos
+      precision: 2,
+      allowZero: true,
+      allowNegative: false
     });
 
 }
 
-function calcularSubTotal3() {
-    var notaConteudo = parseFloat(document.getElementById("conteudoApresentacao").value);
-    var notaDominio = parseFloat(document.getElementById("dominio").value);
-    var notaPoderSintese = parseFloat(document.getElementById("poderSintese").value);
+function calcularApresentacaoAv1() {
+    const notaConteudo = parseFloat(document.getElementById("presentationContentAv1").value);
+    const notaDominio = parseFloat(document.getElementById("domainPresentationAv1").value);
+    const notaPoderSintese = parseFloat(document.getElementById("timeAndSintersAv1").value);
   
     if (!isNaN(notaConteudo) && !isNaN(notaDominio) && !isNaN(notaPoderSintese)) {
-      
-        var subTotal3 = notaConteudo + notaDominio + notaPoderSintese;
 
-        document.getElementById("subT3").value = subTotal3.toFixed(2);
+        const subTotal3 = notaConteudo + notaDominio + notaPoderSintese;
+
+        document.getElementById("subPresentationAv1").value = subTotal3.toFixed(2);
     } else {
-      document.getElementById("subT3").value = "";
+      document.getElementById("subPresentationAv1").value = "";
     }
-    calcularTotal();
+    calcularTotalAv1();
   }
   
-  function calcularSubTotal7() {
+  function calcularRelatorioAv1() {
 
-    var notaEstrutura = parseFloat(document.getElementById("estrutura").value);
-    var notaRelOriQual = parseFloat(document.getElementById("relOriQual").value);
-    var notaConhecimento = parseFloat(document.getElementById("conhecimento").value);
-    var notaAdequacao = parseFloat(document.getElementById("adequacao").value);
+      const notaEstrutura = parseFloat(document.getElementById("structAv1").value);
+      const notaRelOriQual = parseFloat(document.getElementById("qualityAv1").value);
+      const notaConhecimento = parseFloat(document.getElementById("knowledgeAv1").value);
+      const notaAdequacao = parseFloat(document.getElementById("adequationAv1").value);
   
     if (!isNaN(notaEstrutura) && !isNaN(notaRelOriQual) && !isNaN(notaConhecimento) && !isNaN(notaAdequacao)) {
 
-        var subTotal7 = notaEstrutura + notaRelOriQual + notaConhecimento + notaAdequacao;
+        const subTotal7 = notaEstrutura + notaRelOriQual + notaConhecimento + notaAdequacao;
 
-        document.getElementById("subT7").value = subTotal7.toFixed(2);
+        document.getElementById("subWriteAv1").value = subTotal7.toFixed(2);
     } else {
-      document.getElementById("subT7").value = "";
+      document.getElementById("subWriteAv1").value = "";
     }
   
-    calcularTotal();
+    calcularTotalAv1();
   }
   
-  function calcularTotal() {
-    var subTotal3 = parseFloat(document.getElementById("subT3").value);
-    var subTotal7 = parseFloat(document.getElementById("subT7").value);
+  function calcularTotalAv1() {
+    const subTotal3 = parseFloat(document.getElementById("subPresentationAv1").value);
+    const subTotal7 = parseFloat(document.getElementById("subWriteAv1").value);
   
     if (!isNaN(subTotal3) && !isNaN(subTotal7)) {
-      var total = subTotal3 + subTotal7;
-      document.getElementById("total").value = total.toFixed(2);
+        const total = subTotal3 + subTotal7;
+      document.getElementById("totalWriteAv1").value = total.toFixed(2);
     } else {
-      document.getElementById("total").value = "";
+      document.getElementById("totalWriteAv1").value = "";
     }
   }
   
-  /*document.getElementById("conteudoApresentacao").addEventListener("input", calcularSubTotal3)*/
-  document.getElementById("dominio").addEventListener("input", calcularSubTotal3);
-  document.getElementById("poderSintese").addEventListener("input", calcularSubTotal3);
+  document.getElementById("presentationContentAv1").addEventListener("input", calcularApresentacaoAv1)
+  document.getElementById("domainPresentationAv1").addEventListener("input", calcularApresentacaoAv1);
+  document.getElementById("timeAndSintersAv1").addEventListener("input", calcularApresentacaoAv1);
   
-  document.getElementById("adequacao").addEventListener("input", calcularSubTotal7);
-  document.getElementById("conhecimento").addEventListener("input", calcularSubTotal7);
-  document.getElementById("relOriQual").addEventListener("input", calcularSubTotal7);
-  document.getElementById("estrutura").addEventListener("input", calcularSubTotal7);
-  
+  document.getElementById("adequationAv1").addEventListener("input", calcularRelatorioAv1);
+  document.getElementById("knowledgeAv1").addEventListener("input", calcularRelatorioAv1);
+  document.getElementById("qualityAv1").addEventListener("input", calcularRelatorioAv1);
+  document.getElementById("structAv1").addEventListener("input", calcularRelatorioAv1);
+
+
+
+
+function calcularApresentacaoAv2() {
+    const notaConteudo = parseFloat(document.getElementById("presentationContentAv2").value);
+    const notaDominio = parseFloat(document.getElementById("domainPresentationAv2").value);
+    const notaPoderSintese = parseFloat(document.getElementById("timeAndSintersAv2").value);
+
+    if (!isNaN(notaConteudo) && !isNaN(notaDominio) && !isNaN(notaPoderSintese)) {
+
+        const subTotal3 = notaConteudo + notaDominio + notaPoderSintese;
+
+        document.getElementById("subPresentationAv2").value = subTotal3.toFixed(2);
+    } else {
+        document.getElementById("subPresentationAv2").value = "";
+    }
+    calcularTotalAv2();
+}
+
+function calcularRelatorioAv2() {
+
+    const notaEstrutura = parseFloat(document.getElementById("structAv2").value);
+    const notaRelOriQual = parseFloat(document.getElementById("qualityAv2").value);
+    const notaConhecimento = parseFloat(document.getElementById("knowledgeAv2").value);
+    const notaAdequacao = parseFloat(document.getElementById("adequationAv2").value);
+
+    if (!isNaN(notaEstrutura) && !isNaN(notaRelOriQual) && !isNaN(notaConhecimento) && !isNaN(notaAdequacao)) {
+
+        const subTotal7 = notaEstrutura + notaRelOriQual + notaConhecimento + notaAdequacao;
+
+        document.getElementById("subWriteAv2").value = subTotal7.toFixed(2);
+    } else {
+        document.getElementById("subWriteAv2").value = "";
+    }
+
+    calcularTotalAv2();
+}
+
+function calcularTotalAv2() {
+    const subTotal3 = parseFloat(document.getElementById("subPresentationAv2").value);
+    const subTotal7 = parseFloat(document.getElementById("subWriteAv2").value);
+
+    if (!isNaN(subTotal3) && !isNaN(subTotal7)) {
+        const total = subTotal3 + subTotal7;
+        document.getElementById("totalWriteAv2").value = total.toFixed(2);
+    } else {
+        document.getElementById("totalWriteAv2").value = "";
+    }
+}
+
+document.getElementById("presentationContentAv2").addEventListener("input", calcularApresentacaoAv2)
+document.getElementById("domainPresentationAv2").addEventListener("input", calcularApresentacaoAv2);
+document.getElementById("timeAndSintersAv2").addEventListener("input", calcularApresentacaoAv2);
+
+document.getElementById("adequationAv2").addEventListener("input", calcularRelatorioAv2);
+document.getElementById("knowledgeAv2").addEventListener("input", calcularRelatorioAv2);
+document.getElementById("qualityAv2").addEventListener("input", calcularRelatorioAv2);
+document.getElementById("structAv2").addEventListener("input", calcularRelatorioAv2);

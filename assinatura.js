@@ -1,12 +1,12 @@
 
 function iniciarCanvas(canvasId) {
-    var canvas = document.getElementById(canvasId);
-    var ctx = canvas.getContext("2d");
-    var assinaturaImagem = document.getElementById("assinaturaImagem");
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext("2d");
+    const assinaturaImagem = document.getElementById("assinaturaImagem");
 
-    var desenhando = false;
-    var xAnterior = 0;
-    var yAnterior = 0;
+    let desenhando = false;
+    let xAnterior = 0;
+    let yAnterior = 0;
 
     canvas.addEventListener("mousedown", function (e) {
         desenhando = true;
@@ -23,8 +23,8 @@ function iniciarCanvas(canvasId) {
 
     canvas.addEventListener("mousemove", function (e) {
         if (!desenhando) return;
-        var x = e.clientX - canvas.getBoundingClientRect().left;
-        var y = e.clientY - canvas.getBoundingClientRect().top;
+        const x = e.clientX - canvas.getBoundingClientRect().left;
+        const y = e.clientY - canvas.getBoundingClientRect().top;
 
         ctx.beginPath();
         ctx.moveTo(xAnterior, yAnterior);
@@ -40,8 +40,8 @@ function iniciarCanvas(canvasId) {
     canvas.addEventListener("touchmove", function (e) {
         e.preventDefault(); // Impede o comportamento padrão do toque
         if (!desenhando) return;
-        var x = e.touches[0].clientX - canvas.getBoundingClientRect().left;
-        var y = e.touches[0].clientY - canvas.getBoundingClientRect().top;
+        const x = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+        const y = e.touches[0].clientY - canvas.getBoundingClientRect().top;
 
         ctx.beginPath();
         ctx.moveTo(xAnterior, yAnterior);
