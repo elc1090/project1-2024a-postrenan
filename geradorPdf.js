@@ -128,7 +128,7 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   let dataFinal = document.getElementById("finalDate").value;
 
   const radios = document.getElementsByName("alterar");
-  const selected = Array.from(radios).find(radio => radio.checked)
+  const selected = Array.from(radios).find(radio => radio.checked);
 
   const conteudoPDF = `
     Aluno: ${nomeAluno} 
@@ -137,10 +137,10 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
     Hora: ${hora}
         `;
 
-  doc.text(conteudoPDF, 27, 180, 0);
+  doc.text(conteudoPDF, 27, 150, 0);
   const x1 = 20;
   const x2 = 166;
-
+  y += 45;
   doc.text("Apresentação", 100, y, 0);
   y += 10;
   doc.text("Conteúdo da Apresentação:", x1, y, 0);
