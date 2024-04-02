@@ -111,7 +111,7 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   doc.text(local, 115, 190);
 
   doc.addPage();
-
+  doc.addImage(img, "PNG", 0, 0, width, height);
 
   const conteudoApresentacao = document.getElementById("presentationContentAv1").value;
   const dominio = document.getElementById("domainPresentationAv1").value;
