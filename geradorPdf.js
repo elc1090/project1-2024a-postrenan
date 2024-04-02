@@ -157,7 +157,7 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   doc.text(subT3, x2, y, 0);
 
   y += 16;
-  doc.text("Conteúdo do relatório escrito", 100, y -150 , 0);
+  doc.text("Conteúdo do relatório escrito", 100, y, 0);
   y += 10;
 
   doc.text("Estrutura do trabalho:", x1, y, 0);
