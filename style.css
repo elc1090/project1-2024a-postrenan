@@ -128,6 +128,7 @@ textarea {
     input{
         border-radius: 5px;
         min-width: 300px;
+        max-width: 300px;
     }
 
     .header-container{
@@ -140,6 +141,9 @@ textarea {
         border-radius: 10px;
         margin: 10px;
         padding: 5px;
+        background: rgba(215, 215, 215, 0.51);
+        max-width: 350px;
+
     }
 
     .main-container{
@@ -154,7 +158,7 @@ textarea {
     .information-container{
         display: flex;
         border-radius: 15px;
-        margin: 15px;
+        margin: 50px;
         flex-direction: column;
         padding: 10px;
         max-height: fit-content;
@@ -191,7 +195,7 @@ textarea {
     }
     canvas {
         background: #fff;
-        width: 400px;
+        width: 350px;
         height: 150px;
         cursor: pointer;
     }
