@@ -141,20 +141,33 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
 
   // Adicione o conteúdo ao PDF
   doc.text(conteudoPDF, 27, 60, 0);
+  var x1 = 130;
+  var x2 = 166;
 
-  doc.text("Conteúdo da Apresentação:", 130, y, 0);
-  doc.text( conteudoApresentacao, 166, y, 0, );
-  doc.text("Dominio dos recursos didaticos:", 130, y+=7, 0)
-  doc.text(dominio, 166, y+=7, 0, );
-  doc.text("Utilização do tempo e poder de sintese:" ,poderSintese, 166, y+=7, 0);
-  doc.text("SUB-TOTAL:", subT3, 166, y+=7, 0, );
+  doc.text("Conteúdo da Apresentação:", x1, y -150 , 0);
+  doc.text(conteudoApresentacao, x2, y, 0);
+  y += 7;
+  doc.text("Dominio dos recursos didaticos:", x1, y, 0);
+  doc.text(dominio, x2, y, 0);
+  y += 7;
+  doc.text("Utilização do tempo e poder de sintese:", x1, y, 0);
+  doc.text(poderSintese, x2, y, 0);
+  y += 7;
+  doc.text("SUB-TOTAL:", x1, y, 0);
+  doc.text(subT3, x2, y, 0);
 
-  doc.text("Estrutura do trabalho:", estrutura, 166, y+=16, 0, );
-  doc.text("Relevância, Originalidade e Qualidade do Conteúdo do Texto:", relOriQual, 166, y+=7, 0, );
-  doc.text(conhecimento, 166, y+=7, 0, );
-  doc.text(adequacao, 166, y+=7, 0, );
-  doc.text(subT7, 166, y+=8, 0, );
-  doc.text(total, 166, y+=8, 0, );
+  y += 16;
+  doc.text("Estrutura do trabalho:", x1, y, 0);
+  doc.text(estrutura, x2, y, 0);
+  y += 7;
+  doc.text("Relevância, Originalidade e Qualidade do Conteúdo do Texto:", x1, y, 0);
+  doc.text(relOriQual, x2, y, 0);
+  y += 7;
+  doc.text(conhecimento, x1, y, 0);
+  doc.text(adequacao, x2, y, 0);
+  y += 7;
+  doc.text(subT7, x1, y, 0);
+  doc.text(total, x2, y, 0);
 
   doc.text(dataFim, 146, 237.5, 0);
 
