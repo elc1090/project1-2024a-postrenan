@@ -141,7 +141,7 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
 
   // Adicione o conteúdo ao PDF
   doc.text(conteudoPDF, 27, 60, 0);
-  var x1 = 130;
+  var x1 = 20;
   var x2 = 166;
 
   doc.text("Conteúdo da Apresentação:", x1, y -150 , 0);
@@ -163,10 +163,14 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   doc.text("Relevância, Originalidade e Qualidade do Conteúdo do Texto:", x1, y, 0);
   doc.text(relOriQual, x2, y, 0);
   y += 7;
+  doc.text("Grau de Conhecimento Demonstrado no Trabalho Escrito:", x1, y, 0);
   doc.text(conhecimento, x1, y, 0);
+  doc.text("Adequação da Bibliografia Apresentada:", x1, y, 0);
   doc.text(adequacao, x2, y, 0);
   y += 7;
+  doc.text("SUB-TOTAL (max 7):", x1, y, 0);
   doc.text(subT7, x1, y, 0);
+  doc.text("TOTAL (max 10):", x1, y, 0);
   doc.text(total, x2, y, 0);
 
   doc.text(dataFim, 146, 237.5, 0);
