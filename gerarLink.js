@@ -7,26 +7,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Get values from URL parameters
-    var tituloTrabalhoParam = getParameterByName("tituloTrabalho");
-    var nomeAlunoParam = getParameterByName("nomeAluno");
-    var nomeAvaliador1Param = getParameterByName("nomeAvaliador1");
-    var nomeAvaliador2Param = getParameterByName("nomeAvaliador2");
-    var nomeProfessorParam = getParameterByName("nomeProfessor");
-    var dataParam = getParameterByName("data");
-    var horaParam = getParameterByName("hora");
-    var cursoParam = getParameterByName("curso");
-    var salaParam = getParameterByName("sala");
+    var tituloTrabalhoParam = getParameterByName("title");
+    var nomeAlunoParam = getParameterByName("stName");
+    var nomeAvaliador1Param = getParameterByName("av1Name");
+    var nomeAvaliador2Param = getParameterByName("av2Name");
+    var nomeProfessorParam = getParameterByName("orName");
+    var dataParam = getParameterByName("date");
+    var horaParam = getParameterByName("time");
+    var cursoParam = getParameterByName("course");
+    var salaParam = getParameterByName("room");
 
     // Fill form fields with URL parameter values
-    document.getElementById("tituloTrabalho").value = tituloTrabalhoParam || "";
-    document.getElementById("nomeAluno").value = nomeAlunoParam || "";
-    document.getElementById("nomeAvaliador1").value = nomeAvaliador1Param || "";
-    document.getElementById("nomeAvaliador2").value = nomeAvaliador2Param || "";
-    document.getElementById("nomeProfessor").value = nomeProfessorParam || "";
-    document.getElementById("data").value = dataParam || "";
-    document.getElementById("hora").value = horaParam || "";
-    document.getElementById("curso").value = cursoParam || "";
-    document.getElementById("sala").value = salaParam || "";
+    document.getElementById("title").value = tituloTrabalhoParam || "";
+    document.getElementById("stName").value = nomeAlunoParam || "";
+    document.getElementById("av1Name").value = nomeAvaliador1Param || "";
+    document.getElementById("av2Name").value = nomeAvaliador2Param || "";
+    document.getElementById("orName").value = nomeProfessorParam || "";
+    document.getElementById("date").value = dataParam || "";
+    document.getElementById("time").value = horaParam || "";
+    document.getElementById("course").value = cursoParam || "";
+    document.getElementById("room").value = salaParam || "";
   });
 
 
@@ -34,15 +34,15 @@ const btn = document.querySelector("#gerarLink");
 
 btn.addEventListener("click", function(e){
     e.preventDefault();
-    const nomeAluno = encodeURIComponent(document.getElementById("nomeAluno").value);
-    const tituloTrabalho = encodeURIComponent(document.getElementById("tituloTrabalho").value);
-    const nomeAvaliador1 = encodeURIComponent(document.getElementById("nomeAvaliador1").value);
-    const nomeAvaliador2 = encodeURIComponent(document.getElementById("nomeAvaliador2").value);
-    const nomeProfessor = encodeURIComponent(document.getElementById("nomeProfessor").value);
-    const dataValue = encodeURIComponent(document.getElementById("data").value);
-    const horaValue = encodeURIComponent(document.getElementById("hora").value);
-    const curso = encodeURIComponent(document.getElementById("curso").value);
-    const sala = encodeURIComponent(document.getElementById("sala").value);
+    const nomeAluno = encodeURIComponent(document.getElementById("stName").value);
+    const tituloTrabalho = encodeURIComponent(document.getElementById("title").value);
+    const nomeAvaliador1 = encodeURIComponent(document.getElementById("av1Name").value);
+    const nomeAvaliador2 = encodeURIComponent(document.getElementById("av2Name").value);
+    const nomeProfessor = encodeURIComponent(document.getElementById("orName").value);
+    const dataValue = encodeURIComponent(document.getElementById("date").value);
+    const horaValue = encodeURIComponent(document.getElementById("time").value);
+    const curso = encodeURIComponent(document.getElementById("course").value);
+    const sala = encodeURIComponent(document.getElementById("room").value);
 
 
     const url = `index.html?tituloTrabalho=${tituloTrabalho}&nomeAluno=${nomeAluno}&nomeProfessor=${nomeProfessor}&nomeAvaliador1=${nomeAvaliador1}&nomeAvaliador2=${nomeAvaliador2}&curso=${curso}&data=${dataValue}&hora=${horaValue}&sala=${sala}`;

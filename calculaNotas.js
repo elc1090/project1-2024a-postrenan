@@ -106,7 +106,7 @@ function calcularSubTotal3() {
     }
   }
   
-  document.getElementById("conteudoApresentacao").addEventListener("input", calcularSubTotal3);
+  /*document.getElementById("conteudoApresentacao").addEventListener("input", calcularSubTotal3)*/
   document.getElementById("dominio").addEventListener("input", calcularSubTotal3);
   document.getElementById("poderSintese").addEventListener("input", calcularSubTotal3);
   
