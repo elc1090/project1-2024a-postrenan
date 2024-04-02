@@ -136,8 +136,8 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
     Data: ${data}
     Hora: ${hora}
         `;
-
-  doc.text(conteudoPDF, 27, 150, 0);
+  let y = 80;
+  doc.text(conteudoPDF, 27, 80, 0);
   const x1 = 20;
   const x2 = 166;
   y += 45;
